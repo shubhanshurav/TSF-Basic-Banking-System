@@ -46,6 +46,19 @@ sendMoneyForm.addEventListener('submit', function(event) {
   const recipient = document.querySelector('#recipient').value;
   const email = document.querySelector('#email').value;
   const amount = document.querySelector('#amount').value;
+
+  const sendMoneybtn = document.getElementById("send-money-btn");
+  sendMoneybtn.addEventListener("click", function() {
+    // Code to add user goes here
+    if (!recipient || !email || !amount) {
+      alert('Please fill out all fields before submitting the form.');
+      return;
+    }else{
+      // Show alert when user is added
+      alert("Money Sending successfully!");
+    }
+
+  });
   
   // Add the transaction to the transaction history
   addTransactionToHistory(recipient, email, amount);
@@ -85,6 +98,18 @@ addUserForm.addEventListener('submit', function(event) {
   const email = document.querySelector('#add-user #email').value;
   const balance = document.querySelector('#balance').value;
   
+  const addUserBtn = document.getElementById("add-user-btn");
+  addUserBtn.addEventListener("click", function() {
+    // Code to add user goes here
+    if (!username || !email || !balance) {
+      alert('Please fill out all fields before submitting the form.');
+      return;
+    }else{
+      // Show alert when user is added
+      alert("User added successfully!");
+    }
+  });
+
   // Add the user to the user list
   addUserToTable(username, email, balance);
   
@@ -101,21 +126,7 @@ clearUserButton.addEventListener('click', function() {
   userList = [];
 });
 
-const sendMoneybtn = document.getElementById("send-money-btn");
-  sendMoneybtn.addEventListener("click", function() {
-    // Code to add user goes here
 
-    // Show alert when user is added
-    alert("Money Sending successfully!");
-  });
-
-const addUserBtn = document.getElementById("add-user-btn");
-  addUserBtn.addEventListener("click", function() {
-    // Code to add user goes here
-
-    // Show alert when user is added
-    alert("User added successfully!");
-  });
 
 // Populate the user list with some initial data
 // addUserToTable('Alice', 'alice@example.com', 1000);
