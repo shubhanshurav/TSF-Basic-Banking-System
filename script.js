@@ -101,6 +101,22 @@ clearUserButton.addEventListener('click', function() {
   userList = [];
 });
 
+const sendMoneybtn = document.getElementById("send-money-btn");
+  sendMoneybtn.addEventListener("click", function() {
+    // Code to add user goes here
+
+    // Show alert when user is added
+    alert("Money Sending successfully!");
+  });
+
+const addUserBtn = document.getElementById("add-user-btn");
+  addUserBtn.addEventListener("click", function() {
+    // Code to add user goes here
+
+    // Show alert when user is added
+    alert("User added successfully!");
+  });
+
 // Populate the user list with some initial data
 // addUserToTable('Alice', 'alice@example.com', 1000);
 // addUserToTable('Bob', 'bob@example.com', 2000);

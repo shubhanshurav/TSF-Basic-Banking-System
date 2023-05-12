@@ -24,29 +24,29 @@
 	<main>
 		<section id="send-money">
 			<h2>Send Money</h2>
-			<form>
+			<form onsubmit="return validateSendMoneyForm()">
 				<label for="recipient">Recipient:</label>
-				<input type="text" placeholder="Enter Recipient name" id="recipient" name="recipient">
+				<input type="text" placeholder="Enter Recipient name" id="recipient" name="recipient" required>
 				<label for="email">Email:</label>
-				<input type="email" placeholder="Enter email" id="email" name="email">
+				<input type="email" placeholder="Enter email" id="email" name="email" required>
 				<label for="amount">Amount:</label>
-				<input type="number" placeholder="Enter Amount" id="amount" name="amount">
-				<button type="submit">Send</button>
+				<input type="number" placeholder="Enter Amount" id="amount" name="amount" required>
+				<button id="send-money-btn" type="submit">Send</button>
 			</form>
 		</section>
-
+		
 		<section id="add-user">
 			<h2>Add User</h2>
-			<form>
-			  <label for="username">Username:</label>
-			  <input type="text" placeholder="Enter your username" id="username" name="username">
-			  <label for="email">Email:</label>
-			  <input type="email" placeholder="Enter your email" id="email" name="email">
-			  <label for="balance">Initial balance:</label>
-			  <input type="number" placeholder="Enter amount" id="balance" name="balance">
-			  <button type="submit">Add User</button>
+			<form onsubmit="return validateAddUserForm()">
+				<label for="username">Username:</label>
+				<input type="text" placeholder="Enter your username" id="username" name="username" required>
+				<label for="email">Email:</label>
+				<input type="email" placeholder="Enter your email" id="email" name="email" required>
+				<label for="balance">Initial balance:</label>
+				<input type="number" placeholder="Enter amount" id="balance" name="balance" required>
+				<button id="add-user-btn" type="submit">Add User</button>
 			</form>
-		  </section>
+		</section>
 
 		  <section id="user-add">
 			<h2>User Details</h2>

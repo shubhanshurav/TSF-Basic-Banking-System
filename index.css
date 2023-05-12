@@ -99,3 +99,51 @@ body {
     }
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #alert {
+    display: none;
+    background-color: rgb(252, 219, 219);
+    border: 1px solid green;
+    position: fixed;
+    height: 80px;
+    width: 250px;
+    left: 40%;
+    top: 2%;
+    padding: 6px 8px 8px;
+    text-align: center;
+ }
+ p {
+    font-size: 18px;
+    color: green;
+ }
+ button {
+    border-radius: 12px;
+    height: 2rem;
+    padding: 7px;
+    cursor: pointer;
+    border: 2px solid green;
+    background-color: aqua;
+ }
+ #close {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+ }
